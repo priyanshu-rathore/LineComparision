@@ -47,16 +47,19 @@
 
             Console.WriteLine("Length between two points is {0}", length2);
 
-            bool check = length.Equals(length2);
+            // using CompareTo() method
+            int status = length.CompareTo(length2);
 
-            if(check == true)
-            {
-                Console.WriteLine("Lines are equal");
-            }
+            // checking the status
+            if (status > 0)
+                Console.WriteLine("{0} is greater than {1}",
+                                           length, length2);
+            else if (status < 0)
+                Console.WriteLine("{0} is less than {1}",
+                                        length, length2);
             else
-            {
-                Console.WriteLine("Lines are not equal");
-            }
+                Console.WriteLine("{0} is equal to {1}",
+                                        length, length2);
         }
     }
 }
